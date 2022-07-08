@@ -5,7 +5,7 @@ class DescriptionPlace extends StatelessWidget {
   int stars;
   String descriptionPlace;
 
-  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
+   DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
