@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'description_place.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,35 +30,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Segundo Reto'),
         ),
-        body: Stack (
-          children: <Widget>[
-            const Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              child:  Image( image:  NetworkImage('https://images.unsplash.com/photo-1527769929977-c341ee9f2033?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', scale: 1.0), fit: BoxFit.cover),
-            ),
-            Center(
-              child: Container(
-                width: 400,
-                height: 50,
-                color: Colors.black.withOpacity(0.5), 
-              )
-            ),
-            const Center(
-              child: Text(
-                'Naughty',
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.white
-                ),
-              )
-            ),
-           
-          ],
+        body: const DescriptionPlace(),
           
-      )),
+      ),
     );
   }
 }
