@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Segundo Reto'),
         ),
-        body: const DescriptionPlace(),
+        body: new DescriptionPlace('Example', 4, 'Example description'),
           
       ),
     );
