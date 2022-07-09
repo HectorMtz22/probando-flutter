@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'star.dart';
 
 class DescriptionPlace extends StatelessWidget {
   String namePlace ;
@@ -25,17 +26,6 @@ class DescriptionPlace extends StatelessWidget {
     );
     
 
-    final star = Container(
-      margin: const EdgeInsets.only(
-        top: 323.0,
-        right: 0.0
-      ),
-      child: const Icon(
-        Icons.star,
-        color: Color(0xFFf2C611),
-        size: 22.0,
-      ),
-    );
 
     final titleStars = Row(
       children: <Widget>[
@@ -57,11 +47,11 @@ class DescriptionPlace extends StatelessWidget {
         ),
 
         Row(children: <Widget>[
-          star,
-          star,
-          star,
-          star,
-          star,
+          Star(2),
+          Star(0),
+          Star(0),
+          Star(0),
+          Star(0),
           ],
         )
       ],
