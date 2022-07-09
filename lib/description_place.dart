@@ -40,6 +40,7 @@ class DescriptionPlace extends StatelessWidget {
             namePlace,
             // textAlign: TextAlign.left,
             style: const TextStyle(
+              fontFamily: 'Lato',
               fontSize: 30,
               fontWeight: FontWeight.w900,
             ),
