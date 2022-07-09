@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_trips_app/review.dart';
 import 'description_place.dart';
 
 void main() {
@@ -30,8 +31,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Segundo Reto'),
         ),
-        body: DescriptionPlace('Hello', 4, 'Lorem Ipsum Dolor Sit amet alavery long text',),
-          
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            DescriptionPlace('Hello', 4, 'Lorem Ipsum Dolor Sit amet alavery long text',),
+            Review('assets/img/cynthia.jpg'),
+          ]
+        ),
       ),
     );
   }
