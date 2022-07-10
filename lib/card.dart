@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'floating_action_button.dart';
 
 class CardImage extends StatelessWidget {
   final String pathUrl;
@@ -7,6 +8,19 @@ class CardImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        _card(),
+        Container(
+          width: 250,
+          alignment: Alignment.bottomRight,
+          child: const MyFloatingActionButton(),
+        )
+      ],
+    );
+  }
+
+  Widget _card() {
     return Container(
       height: 200,
       width: 250,
