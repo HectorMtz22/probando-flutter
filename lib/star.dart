@@ -1,10 +1,8 @@
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class Star extends StatelessWidget {
-  int estado = 0;
-  Star(this.estado,{Key? key}) : super(key: key);
+  final int estado;
+  const Star(this.estado,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
