@@ -2,78 +2,68 @@ import 'package:flutter/material.dart';
 import 'star.dart';
 
 class DescriptionPlace extends StatelessWidget {
-  final String namePlace ;
+  final String namePlace;
   final int stars;
   final String descriptionPlace;
 
-  const DescriptionPlace({
-    required this.namePlace, 
-    required this.stars, 
-    required this.descriptionPlace, 
-    Key? key
-  }) : super(key: key);
+  const DescriptionPlace(
+      {required this.namePlace,
+      required this.stars,
+      required this.descriptionPlace,
+      Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final description = Container(
-      margin: const EdgeInsets.only(
-        top: 20,
-        left: 20,
-        right: 20,
-      ),
-      child: Text(
-      descriptionPlace,
-      style: const TextStyle(
-        fontSize: 16,
-        color: Color(0xFF56575a)
-      ),
-    )
-    );
-    
-
+        margin: const EdgeInsets.only(
+          top: 20,
+          left: 20,
+          right: 20,
+        ),
+        child: Text(
+          descriptionPlace,
+          style: const TextStyle(fontSize: 16, color: Color(0xFF56575a)),
+        ));
 
     final titleStars = Row(
       children: <Widget>[
         Container(
-          margin: const EdgeInsets.only(
-            top: 320,
-            left: 20,
-            right: 20,
-          ),
-
-          child: Text(
-            namePlace,
-            // textAlign: TextAlign.left,
-            style: const TextStyle(
-              fontFamily: 'Lato',
-              fontSize: 30,
-              fontWeight: FontWeight.w900,
+            margin: const EdgeInsets.only(
+              top: 10,
+              left: 20,
+              right: 20,
             ),
-          )
-        ),
-
-        Row(children: <Widget>[
-          Star(2),
-          Star(0),
-          Star(0),
-          Star(0),
-          Star(0),
+            child: Text(
+              namePlace,
+              // textAlign: TextAlign.left,
+              style: const TextStyle(
+                fontFamily: 'Lato',
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
+              ),
+            )),
+        Row(
+          children: const <Widget>[
+            Star(2),
+            Star(0),
+            Star(0),
+            Star(0),
+            Star(0),
           ],
         )
       ],
-    ); 
-
-    final render = Column(
-      children: <Widget>[
-        titleStars,
-        description,
-      ],
     );
 
-  
+    final render = Container(
+        margin: const EdgeInsets.only(top: 310),
+        child: Column(
+          children: <Widget>[
+            titleStars,
+            description,
+          ],
+        ));
 
     return render;
-    
   }
 }
-
