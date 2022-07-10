@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_trips_app/gradient_back.dart';
 import 'package:flutter_trips_app/review.dart';
 import 'description_place.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light));
   runApp(const MyApp());
 }
 
@@ -29,9 +33,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       home: Scaffold(
-        // appBar: AppBar(
-        //   title: const Text('Segundo Reto'),
-        // ),
+        extendBodyBehindAppBar: true,
         body: Stack(
           children: <Widget>[
             ListView(children: const <Widget>[
