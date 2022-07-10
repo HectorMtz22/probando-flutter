@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             DescriptionPlace('Hello', 4, 'Lorem Ipsum Dolor Sit amet alavery long text',),
-            Review('assets/img/cynthia.jpg'),
+            const Review('assets/img/cynthia.jpg', 'Cynthia', '1 review 5 photos', 'There is an amazing place in Sri Lanka'),
           ]
         ),
       ),
