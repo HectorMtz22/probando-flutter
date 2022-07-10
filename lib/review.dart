@@ -6,7 +6,13 @@ class Review extends StatelessWidget {
   final String details;
   final String comment;
 
-  const Review(this.pathImage, this.name, this.details, this.comment, {Key? key}) : super(key: key);
+  const Review({
+    required this.pathImage, 
+    required this.name,
+    required this.details,
+    required this.comment,
+    Key? key
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
