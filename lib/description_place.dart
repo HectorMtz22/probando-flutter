@@ -43,15 +43,7 @@ class DescriptionPlace extends StatelessWidget {
                 fontWeight: FontWeight.w900,
               ),
             )),
-        Row(
-          children: const <Widget>[
-            Star(2),
-            Star(0),
-            Star(0),
-            Star(0),
-            Star(0),
-          ],
-        )
+        const Rating(5)
       ],
     );
 

@@ -1,10 +1,10 @@
+// Flutter
 import 'package:flutter/material.dart';
-import 'package:flutter_trips_app/card.dart';
-import 'package:flutter_trips_app/gradient_back.dart';
-import 'package:flutter_trips_app/header_appbar.dart';
-import 'package:flutter_trips_app/review.dart';
-import 'description_place.dart';
 import 'package:flutter/services.dart';
+// Own imports
+import 'header_appbar.dart';
+import 'review.dart';
+import 'description_place.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
