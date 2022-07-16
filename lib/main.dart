@@ -53,18 +53,20 @@ class _MyAppState extends State<MyApp> {
           child: BottomNavigationBar(
             currentIndex: indexTap,
             onTap: onTapTapped,
+            showUnselectedLabels: false,
+            selectedFontSize: 12,
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                label: '',
+                label: 'Home',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.search),
-                label: '',
+                label: 'Search',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person),
-                label: '',
+                label: 'Profile',
               ),
             ],
           ),
