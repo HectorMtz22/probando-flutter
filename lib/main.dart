@@ -2,9 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // Own imports
-import 'header_appbar.dart';
-import 'review.dart';
-import 'description_place.dart';
+import 'views/home_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -13,8 +11,25 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int indexTap = 0;
+
+  final List<Widget> pages = [
+    const MyHomePage(),
+  ];
+
+  void onTapTapped(int index) {
+    setState(() {
+      indexTap = index;
+    });
+  }
 
   // This widget is the root of your application.
   @override
@@ -25,36 +40,30 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        body: Stack(
-          children: <Widget>[
-            ListView(children: const <Widget>[
-              DescriptionPlace(
-                namePlace: 'Hello',
-                stars: 4,
-                descriptionPlace:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor condimentum lacinia quis vel eros donec. Nam aliquam sem et tortor consequat id. Congue quisque egestas diam in. \n\nIn fermentum posuere urna nec tincidunt praesent semper. Fames ac turpis egestas integer eget. Sed euismod nisi porta lorem mollis aliquam ut porttitor. Nec ultrices dui sapien eget.',
+        body: pages[indexTap],
+        bottomNavigationBar: Theme(
+          data: Theme.of(context).copyWith(
+            canvasColor: Colors.white,
+            primaryColor: Colors.purple,
+          ),
+          child: BottomNavigationBar(
+            currentIndex: indexTap,
+            onTap: onTapTapped,
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: '',
               ),
-              Review(
-                pathImage: 'assets/img/cynthia.jpg',
-                name: 'Cynthia',
-                details: '1 review 5 photos',
-                comment: 'There is an amazing place in Sri Lanka',
+              BottomNavigationBarItem(
+                icon: Icon(Icons.search),
+                label: '',
               ),
-              Review(
-                pathImage: 'assets/img/cynthia.jpg',
-                name: 'Cynthia',
-                details: '1 review 5 photos',
-                comment: 'There is an amazing place in Sri Lanka',
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: '',
               ),
-              Review(
-                pathImage: 'assets/img/cynthia.jpg',
-                name: 'Cynthia',
-                details: '1 review 5 photos',
-                comment: 'There is an amazing place in Sri Lanka',
-              ),
-            ]),
-            const HeaderAppBar()
-          ],
+            ],
+          ),
         ),
       ),
     );

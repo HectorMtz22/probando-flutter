@@ -8,7 +8,7 @@ class MyFloatingActionButton extends StatefulWidget {
 }
 
 class MyFloatingActionButtonState extends State<MyFloatingActionButton> {
-  var isLiked = false;
+  bool isLiked = false;
   void onPressedButton() {
     setState(() {
       isLiked = !isLiked;
