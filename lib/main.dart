@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // Own imports
 import 'views/home_page.dart';
+import 'views/search_page.dart';
+import 'views/profile_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -23,6 +25,8 @@ class _MyAppState extends State<MyApp> {
 
   final List<Widget> pages = [
     const MyHomePage(),
+    const SearchPage(),
+    const ProfilePage(),
   ];
 
   void onTapTapped(int index) {
@@ -37,7 +41,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
       home: Scaffold(
         body: pages[indexTap],
