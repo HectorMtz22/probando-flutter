@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_trips_app/card.dart';
 import 'package:flutter_trips_app/gradient_back.dart';
+import 'package:flutter_trips_app/widgets/place_you_may_visit.dart';
 import 'circle_avatar.dart';
 
 class ProfileHeader extends StatelessWidget {
@@ -14,8 +15,28 @@ class ProfileHeader extends StatelessWidget {
         maximize: true,
       ),
       Container(
-        margin: const EdgeInsets.only(top: 100),
+        margin: const EdgeInsets.only(top: 80),
         child: _mainProfile(),
+      ),
+      Container(
+        margin: const EdgeInsets.only(top: 300),
+        child: ListView(children: const [
+          PlaceYouMayVisit(
+            title: 'Beautiful Place',
+            description: 'Lorem Ipsum Imagina una dirección',
+            pathUrl: 'assets/img/place1.jpg',
+          ),
+          PlaceYouMayVisit(
+            title: 'River Resort',
+            description: 'Lorem Ipsum Imagina una dirección',
+            pathUrl: 'assets/img/place2.jpg',
+          ),
+          PlaceYouMayVisit(
+            title: 'Mountain Resort',
+            description: 'Lorem Ipsum Imagina una dirección',
+            pathUrl: 'assets/img/place3.jpg',
+          ),
+        ]),
       )
     ]);
   }
