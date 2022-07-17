@@ -28,6 +28,7 @@ class DescriptionPlace extends StatelessWidget {
         ));
 
     final titleStars = Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(
             margin: const EdgeInsets.only(
