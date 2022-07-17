@@ -6,12 +6,14 @@ class Review extends StatelessWidget {
   final String pathImage;
   final String details;
   final String comment;
+  final int stars;
 
   const Review(
       {required this.pathImage,
       required this.name,
       required this.details,
       required this.comment,
+      required this.stars,
       Key? key})
       : super(key: key);
 
@@ -58,7 +60,7 @@ class Review extends StatelessWidget {
                 ),
               ),
             ),
-            const Rating(4, mini: true)
+            Rating(stars, mini: true)
           ],
         ),
         Text(
