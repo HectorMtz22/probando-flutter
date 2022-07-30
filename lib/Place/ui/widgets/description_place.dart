@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'button.dart';
-import 'star.dart';
+import '../../../widgets/button.dart';
+import '../../../widgets/star.dart';
 
 class DescriptionPlace extends StatelessWidget {
   final String namePlace;

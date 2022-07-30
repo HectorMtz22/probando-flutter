@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // Own imports
-import 'views/home_page.dart';
+import 'Place/ui/screens/home_page.dart';
 import 'views/search_page.dart';
-import 'views/profile_page.dart';
+import 'User/ui/screens/profile_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(

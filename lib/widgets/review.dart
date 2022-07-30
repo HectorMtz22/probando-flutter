@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_trips_app/star.dart';
+import 'package:flutter_trips_app/widgets/star.dart';
 
 class Review extends StatelessWidget {
   final String name;

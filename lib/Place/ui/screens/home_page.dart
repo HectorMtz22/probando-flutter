@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../review.dart';
-import '../description_place.dart';
-import '../header_appbar.dart';
+import 'package:flutter_trips_app/widgets/review.dart';
+import '../widgets/description_place.dart';
+import '../widgets/header_appbar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);

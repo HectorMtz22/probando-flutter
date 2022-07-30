@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_trips_app/floating_action_button.dart';
+import 'package:flutter_trips_app/widgets/floating_action_button.dart';
 import 'place_image.dart';
 
 class PlaceYouMayVisit extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'floating_action_button.dart';
-import 'widgets/place_image.dart';
+import '../User/ui/widgets/place_image.dart';
 
 class CardImage extends StatelessWidget {
   final String pathUrl;

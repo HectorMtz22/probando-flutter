@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_trips_app/card.dart';
-import 'package:flutter_trips_app/gradient_back.dart';
-import 'package:flutter_trips_app/widgets/place_you_may_visit.dart';
-import 'circle_avatar.dart';
+// Global
+import 'package:flutter_trips_app/widgets/gradient_back.dart';
+import 'package:flutter_trips_app/widgets/circle_avatar.dart';
+
+// Local
+import '../widgets/place_you_may_visit.dart';
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({Key? key}) : super(key: key);
